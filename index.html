@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,244 +7,656 @@
   <meta name="description" content="Alyssa Jane Rezada — Administrative Support, Patient Coordination, Customer Service and Digital Marketing.">
   <meta name="theme-color" content="#f5f1e9">
   <title>Alyssa Jane Rezada | Professional Portfolio</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* PROJECT CARDS */
+    .project-grid-text {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .project-grid-text .project-text-only {
+      aspect-ratio: 1 / 1;
+      min-height: 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      overflow: hidden;
+      padding: clamp(20px, 2.4vw, 34px);
+      background: #f8f5ef;
+      border: 1px solid #ded7cb;
+    }
+
+    .project-grid-text .project-info {
+      width: 100%;
+      padding: 0;
+    }
+
+    .project-grid-text .project-info .eyebrow {
+      margin: 0 0 18px;
+    }
+
+    .project-grid-text .project-info h3 {
+      margin: 0 0 12px;
+      font-size: clamp(20px, 2vw, 28px);
+      line-height: 1.2;
+    }
+
+    .project-grid-text .project-info > p:not(.eyebrow) {
+      margin: 0;
+      font-size: clamp(14px, 1.05vw, 16px);
+      line-height: 1.65;
+    }
+
+    .project-grid-text .project-info .tag {
+      display: none;
+    }
+
+    /* SMALLER EMAIL CAMPAIGN PREVIEWS */
+    .email-samples {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .email-samples figure {
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .email-samples figure img {
+      display: block;
+      width: min(100%, 300px);
+      height: 280px;
+      margin: 0 auto;
+      object-fit: contain;
+      object-position: center top;
+      background: #eee9df;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 700px) {
+      .project-grid-text {
+        grid-template-columns: 1fr;
+      }
+
+      .project-grid-text .project-text-only {
+        aspect-ratio: auto;
+        min-height: 230px;
+      }
+
+      .email-samples {
+        grid-template-columns: 1fr;
+      }
+
+      .email-samples figure img {
+        width: min(100%, 260px);
+        height: 260px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
+  <!-- NAVIGATION -->
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Alyssa Jane Rezada home">AJR<span>.</span></a>
+
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+
     <nav class="nav" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a>
-      <a href="#projects">Projects</a><a href="#contact" class="nav-cta">Contact</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact" class="nav-cta">Contact</a>
     </nav>
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero section" id="home">
       <div class="hero-copy">
         <p class="eyebrow">PROFESSIONAL PORTFOLIO</p>
-        <h1>Reliable support.<br><em>Thoughtful systems.</em><br>Better workflows.</h1>
-        <p class="hero-intro">I'm <strong>Alyssa Jane Rezada</strong>, an administrative support professional focused on keeping operations organized, communication clear, and day-to-day workflows moving.</p>
+
+        <h1>
+          Reliable support.<br>
+          <em>Thoughtful systems.</em><br>
+          Better workflows.
+        </h1>
+
+        <p class="hero-intro">
+          I'm <strong>Alyssa Jane Rezada</strong>, an administrative support professional focused on keeping operations organized, communication clear, and day-to-day workflows moving.
+        </p>
+
         <div class="hero-actions">
           <a class="button button-dark" href="#projects">Explore my work <span>↗</span></a>
           <a class="text-link" href="#contact">Let's connect</a>
         </div>
-        <div class="hero-meta"><span>ADMINISTRATIVE SUPPORT</span><i></i><span>PATIENT COORDINATION</span><i></i><span>DIGITAL OPERATIONS</span></div>
+
+        <div class="hero-meta">
+          <span>ADMINISTRATIVE SUPPORT</span>
+          <i></i>
+          <span>PATIENT COORDINATION</span>
+          <i></i>
+          <span>DIGITAL OPERATIONS</span>
+        </div>
       </div>
+
       <aside class="hero-card">
         <img class="profile-photo" src="assets/alyssa-profile.jpg" alt="Portrait of Alyssa Jane Rezada">
-        <div class="hero-card-bottom"><span>Based in the Philippines</span><span class="availability-dot"></span></div>
+
+        <div class="hero-card-bottom">
+          <span>Based in the Philippines</span>
+          <span class="availability-dot"></span>
+        </div>
       </aside>
+
       <div class="hero-number">01 / 05</div>
     </section>
 
+    <!-- INTRO STRIP -->
     <section class="intro-strip">
-      <p>ORGANIZED OPERATIONS</p><span>✳</span><p>CLIENT-CENTERED COMMUNICATION</p><span>✳</span><p>CONTINUOUS IMPROVEMENT</p>
+      <p>ORGANIZED OPERATIONS</p>
+      <span>✳</span>
+      <p>CLIENT-CENTERED COMMUNICATION</p>
+      <span>✳</span>
+      <p>CONTINUOUS IMPROVEMENT</p>
     </section>
 
+    <!-- ABOUT -->
     <section class="section about section-pad" id="about">
-      <div class="section-heading"><p class="eyebrow">01 — ABOUT</p><h2>Making the details<br><em>work together.</em></h2></div>
+      <div class="section-heading">
+        <p class="eyebrow">01 — ABOUT</p>
+        <h2>Making the details<br><em>work together.</em></h2>
+      </div>
+
       <div class="about-content">
-        <p class="large-copy">I help busy teams stay organized, communicate clearly, and keep important work moving.</p>
-        <p>My experience brings together administrative support, customer communication, patient coordination, CRM and lead management, email campaign production, graphic design, and workflow automation. I enjoy work that requires both attention to detail and the ability to see how individual tasks fit into a larger process.</p>
-        <p>In administrative and coordination work, I support appointment scheduling, calendar organization, intake and document follow-ups, status tracking, and clear communication across different steps of a workflow. In marketing support, I have worked on HTML email campaigns, promotional content, and visual assets designed to guide an audience toward a clear next action.</p>
-        <p>I also work with digital tools to make recurring tasks easier to manage. Examples in this portfolio include structured lead follow-up processes and a Google Apps Script-to-Slack reminder workflow. The examples are presented in a privacy-conscious way and do not expose private records, credentials, or internal business information.</p>
-        <p>My approach is practical: understand the goal, organize the steps, communicate clearly, and build a process that is easier for a team to follow.</p>
+        <p class="large-copy">
+          I help busy teams stay organized, communicate clearly, and keep important work moving.
+        </p>
+
+        <p>
+          My experience brings together administrative support, customer communication, patient coordination, CRM and lead management, email campaign production, graphic design, and workflow automation. I enjoy work that requires both attention to detail and the ability to see how individual tasks fit into a larger process.
+        </p>
+
+        <p>
+          In administrative and coordination work, I support appointment scheduling, calendar organization, intake and document follow-ups, status tracking, and clear communication across different steps of a workflow. In marketing support, I have worked on HTML email campaigns, promotional content, and visual assets designed to guide an audience toward a clear next action.
+        </p>
+
+        <p>
+          I also work with digital tools to make recurring tasks easier to manage. Examples in this portfolio include structured lead follow-up processes and a Google Apps Script-to-Slack reminder workflow. The examples are presented in a privacy-conscious way and do not expose private records, credentials, or internal business information.
+        </p>
+
+        <p>
+          My approach is practical: understand the goal, organize the steps, communicate clearly, and build a process that is easier for a team to follow.
+        </p>
+
         <a class="text-link" href="#contact">Get in touch <span>↗</span></a>
       </div>
     </section>
 
+    <!-- EXPERIENCE -->
     <section class="section experience section-pad" id="experience">
-      <div class="section-heading"><p class="eyebrow">02 — EXPERIENCE</p><h2>Experience built on<br><em>service and coordination.</em></h2></div>
+      <div class="section-heading">
+        <p class="eyebrow">02 — EXPERIENCE</p>
+        <h2>Experience built on<br><em>service and coordination.</em></h2>
+      </div>
+
       <div class="experience-timeline">
+
         <article class="experience-entry">
-          <div class="experience-meta"><span>FEB 2026 — PRESENT</span><span class="current-label">CURRENT ROLE</span></div>
+          <div class="experience-meta">
+            <span>FEB 2026 — PRESENT</span>
+            <span class="current-label">CURRENT ROLE</span>
+          </div>
+
           <h3>Patient Coordinator Assistant</h3>
           <p class="experience-company">Aura Aesthetica Inc. · Full-time · Beverly Hills, California, United States</p>
-          <p>Support patient coordination and administrative operations to help deliver a smooth, organized patient experience. Manage CRM workflows, including lead tracking, tagging, status updates, and follow-ups. Coordinate consultation scheduling, confirm appointments, and communicate with prospective patients throughout the inquiry and consultation process. Maintain accurate CRM records while assisting the team with lead management, workflow efficiency, and day-to-day clinic operations.</p>
-          <p class="experience-skills">Focus areas: Patient coordination · CRM management · Executive calendar management · Administrative operations</p>
+
+          <p>
+            Support patient coordination and administrative operations to help deliver a smooth, organized patient experience. Manage CRM workflows, including lead tracking, tagging, status updates, and follow-ups. Coordinate consultation scheduling, confirm appointments, and communicate with prospective patients throughout the inquiry and consultation process. Maintain accurate CRM records while assisting the team with lead management, workflow efficiency, and day-to-day clinic operations.
+          </p>
+
+          <p class="experience-skills">
+            Focus areas: Patient coordination · CRM management · Executive calendar management · Administrative operations
+          </p>
         </article>
+
         <article class="experience-entry">
-          <div class="experience-meta"><span>OCT 2024 — MAR 2026</span></div>
+          <div class="experience-meta">
+            <span>OCT 2024 — MAR 2026</span>
+          </div>
+
           <h3>Senior Administrative Support Specialist</h3>
           <p class="experience-company">Bliss Aesthetics · Full-time · Florida, United States</p>
-          <p>Provided administrative and operational support to the Senior Sales Development Representative team, helping sales processes run smoothly from discovery call to surgery deposit. Assigned self-booked consultations to the correct representative and updated calendars in real time. Tracked and confirmed patient appointments using SMS reminders, logged consultation outcomes in HubSpot, and triggered personalized follow-up emails and texts based on consultation results.</p>
-          <p>Managed surgeon approval workflows by chasing photo submissions, updating statuses, and notifying sales representatives. Maintained data integrity across HubSpot, including deal stages and promotional codes, and produced daily audits and reports to monitor funnel health and sales performance.</p>
-          <p class="experience-skills">Focus areas: HubSpot · Calendar management · Patient scheduling · SMS and email follow-up · Reporting</p>
+
+          <p>
+            Provided administrative and operational support to the Senior Sales Development Representative team, helping sales processes run smoothly from discovery call to surgery deposit. Assigned self-booked consultations to the correct representative and updated calendars in real time. Tracked and confirmed patient appointments using SMS reminders, logged consultation outcomes in HubSpot, and triggered personalized follow-up emails and texts based on consultation results.
+          </p>
+
+          <p>
+            Managed surgeon approval workflows by chasing photo submissions, updating statuses, and notifying sales representatives. Maintained data integrity across HubSpot, including deal stages and promotional codes, and produced daily audits and reports to monitor funnel health and sales performance.
+          </p>
+
+          <p class="experience-skills">
+            Focus areas: HubSpot · Calendar management · Patient scheduling · SMS and email follow-up · Reporting
+          </p>
         </article>
+
         <article class="experience-entry">
-          <div class="experience-meta"><span>JAN 2023 — OCT 2024</span></div>
+          <div class="experience-meta">
+            <span>JAN 2023 — OCT 2024</span>
+          </div>
+
           <h3>Customer Support Specialist</h3>
           <p class="experience-company">Foundever · Full-time · Baguio City, Philippines</p>
-          <p>Built relationships with key customers to strengthen loyalty and support customer satisfaction. Gathered customer feedback, monitored support channels, and identified opportunities to improve the customer experience.</p>
-          <p class="experience-skills">Focus areas: Customer satisfaction · Customer communication · Problem solving</p>
+
+          <p>
+            Built relationships with key customers to strengthen loyalty and support customer satisfaction. Gathered customer feedback, monitored support channels, and identified opportunities to improve the customer experience.
+          </p>
+
+          <p class="experience-skills">
+            Focus areas: Customer satisfaction · Customer communication · Problem solving
+          </p>
         </article>
+
         <article class="experience-entry">
-          <div class="experience-meta"><span>JUN 2024 — AUG 2024</span></div>
+          <div class="experience-meta">
+            <span>JUN 2024 — AUG 2024</span>
+          </div>
+
           <h3>Customer Service Specialist</h3>
           <p class="experience-company">Global Fitness and Leisure Pty Ltd · Internship · Melbourne, Australia</p>
-          <p>Developed in-depth knowledge of company products and services to address customer inquiries. Worked with sales and marketing teams on customer-focused initiatives, and created and maintained customer service records and documentation.</p>
-          <p class="experience-skills">Focus areas: Customer service · Zendesk · Gorgias · Sales and marketing coordination</p>
+
+          <p>
+            Developed in-depth knowledge of company products and services to address customer inquiries. Worked with sales and marketing teams on customer-focused initiatives, and created and maintained customer service records and documentation.
+          </p>
+
+          <p class="experience-skills">
+            Focus areas: Customer service · Zendesk · Gorgias · Sales and marketing coordination
+          </p>
         </article>
+
         <article class="experience-entry">
-          <div class="experience-meta"><span>MAY 2022 — NOV 2022</span></div>
+          <div class="experience-meta">
+            <span>MAY 2022 — NOV 2022</span>
+          </div>
+
           <h3>Call Center Support Representative</h3>
           <p class="experience-company">New Media Services Pty Ltd · Contract · Baguio City, Philippines</p>
-          <p>Managed customer inquiries through phone, email, and live chat. Provided technical support, maintained positive customer relationships, and applied problem-solving techniques to identify and resolve customer issues efficiently.</p>
-          <p class="experience-skills">Focus areas: Multichannel support · Technical support · Documentation · Problem solving</p>
+
+          <p>
+            Managed customer inquiries through phone, email, and live chat. Provided technical support, maintained positive customer relationships, and applied problem-solving techniques to identify and resolve customer issues efficiently.
+          </p>
+
+          <p class="experience-skills">
+            Focus areas: Multichannel support · Technical support · Documentation · Problem solving
+          </p>
         </article>
+
         <article class="experience-entry">
-          <div class="experience-meta"><span>OCT 2020 — APR 2022</span></div>
+          <div class="experience-meta">
+            <span>OCT 2020 — APR 2022</span>
+          </div>
+
           <h3>Customer Service Representative</h3>
           <p class="experience-company">Concentrix · Full-time · Baguio City, Philippines</p>
-          <p>Managed customer concerns through careful planning and organized work practices. Identified and resolved problems efficiently, communicated clearly, met deadlines, and produced detailed, complete work. Applied sound judgment, learned new information quickly, and used computer skills and Microsoft Office tools to support daily responsibilities.</p>
-          <p class="experience-skills">Focus areas: Customer relationship management · Claims management · Microsoft Office · Communication</p>
+
+          <p>
+            Managed customer concerns through careful planning and organized work practices. Identified and resolved problems efficiently, communicated clearly, met deadlines, and produced detailed, complete work. Applied sound judgment, learned new information quickly, and used computer skills and Microsoft Office tools to support daily responsibilities.
+          </p>
+
+          <p class="experience-skills">
+            Focus areas: Customer relationship management · Claims management · Microsoft Office · Communication
+          </p>
         </article>
+
       </div>
     </section>
 
+    <!-- EDUCATION -->
     <section class="section education section-pad" id="education">
-      <div class="section-heading"><p class="eyebrow">03 — EDUCATION & CREDENTIALS</p><h2>Learning that supports<br><em>the work I do.</em></h2></div>
+      <div class="section-heading">
+        <p class="eyebrow">03 — EDUCATION & CREDENTIALS</p>
+        <h2>Learning that supports<br><em>the work I do.</em></h2>
+      </div>
+
       <div class="education-grid">
         <div class="education-block">
           <p class="eyebrow">EDUCATION</p>
+
           <h3>University of the Cordilleras</h3>
-          <p class="education-degree">Bachelor of Science in Secondary Education and Teaching</p>
+
+          <p class="education-degree">
+            Bachelor of Science in Secondary Education and Teaching
+          </p>
+
           <p class="education-date">APR 2018 — MAR 2019</p>
-          <p>Academic background with listed skills in computer literacy and problem solving.</p>
+
+          <p>
+            Academic background with listed skills in computer literacy and problem solving.
+          </p>
         </div>
+
         <div class="education-block credentials-block">
           <p class="eyebrow">LICENSES & CERTIFICATIONS</p>
-          <article class="credential"><h3>EF SET English Certificate — C2 Proficient</h3><p>EF SET · English proficiency certification</p></article>
-          <article class="credential"><h3>Essentials of Patient Care Coordination</h3><p>Alison · Issued July 2026</p></article>
-          <article class="credential"><h3>AEO Fundamentals</h3><p>HubSpot Academy · Issued July 2026 · Expires August 2028</p></article>
-          <article class="credential"><h3>The Artificial Intelligence for Communities Workshop</h3><p>Vjal Institute · Issued June 2026</p></article>
+
+          <article class="credential">
+            <h3>EF SET English Certificate — C2 Proficient</h3>
+            <p>EF SET · English proficiency certification</p>
+          </article>
+
+          <article class="credential">
+            <h3>Essentials of Patient Care Coordination</h3>
+            <p>Alison · Issued July 2026</p>
+          </article>
+
+          <article class="credential">
+            <h3>AEO Fundamentals</h3>
+            <p>HubSpot Academy · Issued July 2026 · Expires August 2028</p>
+          </article>
+
+          <article class="credential">
+            <h3>The Artificial Intelligence for Communities Workshop</h3>
+            <p>Vjal Institute · Issued June 2026</p>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- SKILLS -->
     <section class="section skills section-pad" id="skills">
-      <div class="section-heading"><p class="eyebrow">04 — CAPABILITIES</p><h2>Practical skills for<br><em>busy teams.</em></h2></div>
+      <div class="section-heading">
+        <p class="eyebrow">04 — CAPABILITIES</p>
+        <h2>Practical skills for<br><em>busy teams.</em></h2>
+      </div>
+
       <div class="skill-grid">
-        <article class="skill-card"><span>01</span><h3>Administrative Support</h3><p>Organizing calendars and schedules, maintaining records, preparing and tracking documents, coordinating follow-ups, and keeping recurring administrative tasks visible and on time.</p></article>
-        <article class="skill-card"><span>02</span><h3>Patient Coordination</h3><p>Supporting appointment coordination, intake completion, photo and document collection, payment-status follow-ups, patient messaging, and clear handoffs between each step of the scheduling process.</p></article>
-        <article class="skill-card"><span>03</span><h3>CRM & Lead Management</h3><p>Organizing leads by stage, documenting outreach attempts, coordinating calls, texts, and emails, and structuring follow-up and nurture sequences to reduce missed opportunities.</p></article>
-        <article class="skill-card"><span>04</span><h3>Customer Communication</h3><p>Handling customer and client conversations through phone, email, and text; clarifying next steps; documenting outcomes; and maintaining a consistent, professional tone.</p></article>
-        <article class="skill-card"><span>05</span><h3>Digital Marketing Support</h3><p>Building HTML email layouts, arranging campaign content and calls to action, preparing promotional graphics, adapting visual assets, and supporting campaign links to websites or booking destinations.</p></article>
-        <article class="skill-card"><span>06</span><h3>Workflow & Automation</h3><p>Using Google Calendar, Sheets, Apps Script, and Slack workflow concepts to organize recurring tasks, filter relevant events, schedule reminders, and reduce duplicate notifications.</p></article>
+        <article class="skill-card">
+          <span>01</span>
+          <h3>Administrative Support</h3>
+          <p>
+            Organizing calendars and schedules, maintaining records, preparing and tracking documents, coordinating follow-ups, and keeping recurring administrative tasks visible and on time.
+          </p>
+        </article>
+
+        <article class="skill-card">
+          <span>02</span>
+          <h3>Patient Coordination</h3>
+          <p>
+            Supporting appointment coordination, intake completion, photo and document collection, payment-status follow-ups, patient messaging, and clear handoffs between each step of the scheduling process.
+          </p>
+        </article>
+
+        <article class="skill-card">
+          <span>03</span>
+          <h3>CRM & Lead Management</h3>
+          <p>
+            Organizing leads by stage, documenting outreach attempts, coordinating calls, texts, and emails, and structuring follow-up and nurture sequences to reduce missed opportunities.
+          </p>
+        </article>
+
+        <article class="skill-card">
+          <span>04</span>
+          <h3>Customer Communication</h3>
+          <p>
+            Handling customer and client conversations through phone, email, and text; clarifying next steps; documenting outcomes; and maintaining a consistent, professional tone.
+          </p>
+        </article>
+
+        <article class="skill-card">
+          <span>05</span>
+          <h3>Digital Marketing Support</h3>
+          <p>
+            Building HTML email layouts, arranging campaign content and calls to action, preparing promotional graphics, adapting visual assets, and supporting campaign links to websites or booking destinations.
+          </p>
+        </article>
+
+        <article class="skill-card">
+          <span>06</span>
+          <h3>Workflow & Automation</h3>
+          <p>
+            Using Google Calendar, Sheets, Apps Script, and Slack workflow concepts to organize recurring tasks, filter relevant events, schedule reminders, and reduce duplicate notifications.
+          </p>
+        </article>
       </div>
     </section>
 
+    <!-- SELECTED WORK -->
     <section class="section projects section-pad" id="projects">
-      <div class="section-heading"><p class="eyebrow">05 — SELECTED WORK</p><h2>Turning daily tasks<br><em>into clear workflows.</em></h2></div>
-      <p class="section-note project-intro">Selected projects presented in a privacy-safe format. Screenshots and examples can be anonymized or recreated so no patient, customer, employer, or internal business information is exposed.</p>
-      <div class="project-grid">
-        <article class="project-card project-featured">
-          <div class="project-visual visual-crm"><div class="mock-window"><div class="mock-top"><b></b><b></b><b></b></div><div class="mock-title">LEAD PIPELINE</div><div class="mock-columns"><i>NEW</i><i>FOLLOW UP</i><i>NURTURE</i></div><div class="mock-lines"><span></span><span></span><span></span><span></span></div></div></div>
-          <div class="project-info"><p class="eyebrow">CRM · PROCESS DESIGN</p><h3>Lead Follow-Up Workflow</h3><p>Designed a staged outreach process that organizes leads by attempt number and next action. The workflow outlines when to call, text, or email; records outcomes such as no answer or follow-up requested; prevents multiple touches on the same day; and moves unresponsive leads into a longer-term nurture sequence. The goal is to make outreach consistent, visible, and easier for a team to manage.</p><span class="tag">Workflow example</span></div>
-        </article>
-        <article class="project-card">
-          <div class="project-visual visual-calendar"><div class="calendar-art"><b>APPOINTMENT TRACKER</b><div class="calendar-days"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span></div><div class="calendar-blocks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
-          <div class="project-info"><p class="eyebrow">ADMINISTRATION · COORDINATION</p><h3>Appointment & Document Tracking</h3><p>Created an appointment-tracking approach that brings key scheduling details and document requirements into one view. The process supports status checks, reminders before appointments, follow-up on missing intake items, and clear visibility into what still needs attention. It is intended to help a team spot incomplete tasks before they affect the appointment.</p><span class="tag">Operations example</span></div>
-        </article>
-        <article class="project-card">
-          <div class="project-visual visual-email"><div class="email-art"><small>MONTHLY UPDATE</small><strong>Good things<br>are happening.</strong><span></span><i>EXPLORE MORE</i></div></div>
-          <div class="project-info"><p class="eyebrow">DIGITAL MARKETING · HTML DEVELOPMENT</p><h3>Email Campaign Design & Development</h3><p>Designed and assembled HTML email campaigns with a clear visual hierarchy, branded imagery, concise content sections, and prominent calls to action. Campaign layouts were structured to guide readers toward relevant website pages, booking options, or contact actions. Supporting visuals were prepared and adapted alongside the email layout. The gallery below includes selected, anonymized previews.</p><span class="tag">Sanitized case study</span></div>
-        </article>
-        <article class="project-card">
-          <div class="project-visual visual-automation"><div class="automation-art"><div>CALENDAR</div><b>→</b><div>TRACKER</div><b>→</b><div>TEAM ALERT</div></div></div>
-          <div class="project-info"><p class="eyebrow">GOOGLE APPS SCRIPT · SLACK AUTOMATION</p><h3>Calendar-to-Slack Reminder Automation</h3><p>Developed a Google Apps Script workflow that reads selected Google Calendar events and prepares structured Slack reminders for the team. The workflow uses event-title and calendar-color criteria, checks appointment days and durations, schedules reminders at defined times, and applies duplicate-prevention logic. The intended result is a focused alert containing the relevant appointment label, date, and reminder type—without exposing patient details in the portfolio example.</p><span class="tag">Sanitized workflow case study</span></div>
-        </article>
-        <article class="project-card">
-          <div class="project-visual visual-graphics"><div class="graphic-art"><div class="graphic-poster"><small>CREATIVE WORK</small><strong>MAKE<br>IT<br>MATTER.</strong><i>DESIGN · CONTENT · BRANDING</i></div><div class="graphic-tile"><span>01</span><b>VISUAL<br>STORYTELLING</b><i></i></div></div></div>
-          <div class="project-info"><p class="eyebrow">GRAPHIC DESIGN · CANVA · MARKETING</p><h3>Graphic Design & Promotional Materials</h3><p>Created promotional graphics for product and brand marketing, combining product imagery, headline hierarchy, color, and supporting copy into social-ready visual assets. The samples below include pet-product promotion and a wellness-product creative. They demonstrate adapting the visual direction to the product and intended audience while keeping the message easy to scan.</p><span class="tag">Creative portfolio</span></div>
-        </article>
+
+      <div class="section-heading">
+        <p class="eyebrow">05 — SELECTED WORK</p>
+        <h2>Turning daily tasks<br><em>into clear workflows.</em></h2>
       </div>
 
+      <p class="section-note project-intro">
+        Selected projects presented in a privacy-safe format. Screenshots and examples can be anonymized or recreated so no patient, customer, employer, or internal business information is exposed.
+      </p>
+
+      <!-- SQUARE TEXT-ONLY PROJECT CARDS -->
+      <div class="project-grid project-grid-text">
+
+        <article class="project-card project-text-only">
+          <div class="project-info">
+            <p class="eyebrow">01 — CRM & PROCESS DESIGN</p>
+            <h3>Lead Follow-Up Workflow</h3>
+            <p>
+              A structured CRM process for organizing leads by outreach stage, tracking calls, texts, and emails, recording outcomes, and managing long-term nurture follow-ups. Designed to keep communication consistent and prevent missed or duplicate touches.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card project-text-only">
+          <div class="project-info">
+            <p class="eyebrow">02 — ADMINISTRATION & COORDINATION</p>
+            <h3>Appointment & Document Tracking</h3>
+            <p>
+              An organized appointment coordination process for tracking schedules, required documents, intake completion, reminders, and pending follow-ups. Designed to help teams identify incomplete requirements and keep appointments on track.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card project-text-only">
+          <div class="project-info">
+            <p class="eyebrow">03 — DIGITAL MARKETING & HTML</p>
+            <h3>Email Campaign Design & Development</h3>
+            <p>
+              Designed HTML email campaigns with branded visuals, organized content, responsive layouts, and clickable calls to action directing readers to websites, booking pages, and contact options.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card project-text-only">
+          <div class="project-info">
+            <p class="eyebrow">04 — GOOGLE APPS SCRIPT & SLACK</p>
+            <h3>Calendar-to-Slack Reminder Automation</h3>
+            <p>
+              Developed a Google Apps Script workflow connecting selected Google Calendar events to scheduled Slack reminders. Includes event filtering, reminder timing, and duplicate-prevention logic to support consistent team follow-ups.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card project-text-only">
+          <div class="project-info">
+            <p class="eyebrow">05 — GRAPHIC DESIGN & MARKETING</p>
+            <h3>Graphic Design & Promotional Materials</h3>
+            <p>
+              Created promotional graphics for product and brand marketing, combining product photography, typography, colors, and engaging copy. Includes social media creatives and product advertisements for Shop Bupba and TALS.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- EMAIL AND GRAPHIC DESIGN GALLERY -->
       <div class="portfolio-gallery">
-        <div class="gallery-heading"><p class="eyebrow">CAMPAIGN & DESIGN SAMPLES</p><h3>Campaigns & creative portfolio</h3><p>Anonymized email campaign previews and promotional graphics. Clinic mastheads and test greetings have been removed, and identifying clinician details in the first sample have been obscured.</p></div>
+
+        <div class="gallery-heading">
+          <p class="eyebrow">CAMPAIGN & DESIGN SAMPLES</p>
+          <h3>Campaigns & creative portfolio</h3>
+          <p>
+            Anonymized email campaign previews and promotional graphics. Clinic mastheads and test greetings have been removed, and identifying clinician details in the first sample have been obscured.
+          </p>
+        </div>
+
+        <!-- EMAIL CAMPAIGNS -->
         <div class="sample-group">
           <h4>Email campaigns</h4>
+
           <div class="sample-grid email-samples">
-            <figure><img src="assets/email-fat-transfer-preview.jpg" alt="Email campaign preview about fat transfer education"><figcaption><strong>Anonymized Educational Email</strong><span>Healthcare education · HTML email layout</span></figcaption></figure>
-            <figure><img src="assets/email-recovery-preview.jpg" alt="Email campaign preview about planning for recovery"><figcaption><strong>Anonymized Preparation Email</strong><span>Patient education · Email content and visual hierarchy</span></figcaption></figure>
+
+            <figure>
+              <img
+                src="assets/email-fat-transfer-preview.jpg"
+                alt="Email campaign preview about fat transfer education"
+              >
+              <figcaption>
+                <strong>Anonymized Educational Email</strong>
+                <span>Healthcare education · HTML email layout</span>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="assets/email-recovery-preview.jpg"
+                alt="Email campaign preview about planning for recovery"
+              >
+              <figcaption>
+                <strong>Anonymized Preparation Email</strong>
+                <span>Patient education · Email content and visual hierarchy</span>
+              </figcaption>
+            </figure>
+
           </div>
         </div>
+
+        <!-- GRAPHIC DESIGN -->
         <div class="sample-group">
           <h4>Graphic design</h4>
+
           <div class="sample-grid graphic-samples">
-            <figure><img src="assets/shop-bupba-dog-toy.jpg" alt="Shop Bupba dog toy promotional graphic"><figcaption><strong>Shop Bupba — Dog Toy Promotion</strong><span>Pet retail · Promotional social graphic</span></figcaption></figure>
-            <figure><img src="assets/tals-soft-reset.jpg" alt="TALS Soft Reset product promotional graphic"><figcaption><strong>TALS — Soft Reset Product Creative</strong><span>Wellness brand · Product promotion</span></figcaption></figure>
-            <figure><img src="assets/shop-bupba-dog-bowl.jpg" alt="Shop Bupba dog bowl promotional graphic"><figcaption><strong>Shop Bupba — Everyday Finds</strong><span>Pet retail · Brand and product promotion</span></figcaption></figure>
+
+            <figure>
+              <img
+                src="assets/shop-bupba-dog-toy.jpg"
+                alt="Shop Bupba dog toy promotional graphic"
+              >
+              <figcaption>
+                <strong>Shop Bupba — Dog Toy Promotion</strong>
+                <span>Pet retail · Promotional social graphic</span>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="assets/tals-soft-reset.jpg"
+                alt="TALS Soft Reset product promotional graphic"
+              >
+              <figcaption>
+                <strong>TALS — Soft Reset Product Creative</strong>
+                <span>Wellness brand · Product promotion</span>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="assets/shop-bupba-dog-bowl.jpg"
+                alt="Shop Bupba dog bowl promotional graphic"
+              >
+              <figcaption>
+                <strong>Shop Bupba — Everyday Finds</strong>
+                <span>Pet retail · Brand and product promotion</span>
+              </figcaption>
+            </figure>
+
           </div>
         </div>
+
       </div>
     </section>
 
-    
-<section class="section contact section-pad" id="contact">
-  <div class="contact-main">
-    <p class="eyebrow">06 — CONTACT</p>
+    <!-- CONTACT -->
+    <section class="section contact section-pad" id="contact">
 
-    <h2>Let's make work<br><em>flow better.</em></h2>
+      <div class="contact-main">
+        <p class="eyebrow">06 — CONTACT</p>
 
-    <p>
-      For professional opportunities, collaborations, or questions,
-      contact me directly by phone or email. I welcome conversations
-      about administrative support, coordination, and digital
-      operations opportunities.
-    </p>
+        <h2>Let's make work<br><em>flow better.</em></h2>
 
-    <div class="contact-actions">
-      <a class="button button-light"
-         href="mailto:alyssarezada28@gmail.com">
-        Email Alyssa <span>↗</span>
-      </a>
+        <p>
+          For professional opportunities, collaborations, or questions,
+          contact me directly by phone or email. I welcome conversations
+          about administrative support, coordination, and digital
+          operations opportunities.
+        </p>
 
-      <a class="button button-outline-light"
-         href="tel:+639852867457">
-        Call Alyssa <span>↗</span>
-      </a>
-    </div>
-  </div>
+        <div class="contact-actions">
 
-  <div class="contact-details" id="contact-details">
+          <a class="button button-light"
+             href="mailto:alyssarezada28@gmail.com">
+            Email Alyssa <span>↗</span>
+          </a>
 
-    <div>
-      <small>EMAIL</small>
-      <a href="mailto:alyssarezada28@gmail.com">
-        alyssarezada28@gmail.com
-      </a>
-    </div>
+          <a class="button button-outline-light"
+             href="tel:+639852867457">
+            Call Alyssa <span>↗</span>
+          </a>
 
-    <div>
-      <small>PHONE</small>
-      <a href="tel:+639852867457">
-        +63 985 286 7457
-      </a>
-    </div>
+        </div>
+      </div>
 
-    <div>
-      <small>LINKEDIN</small>
-      <a href="https://www.linkedin.com/in/alyssajane-rezada/"
-         target="_blank" rel="noopener">
-        linkedin.com/in/alyssajane-rezada ↗
-      </a>
-    </div>
+      <div class="contact-details" id="contact-details">
 
-    <div>
-      <small>LOCATION</small>
-      <span>Philippines</span>
-    </div>
+        <div>
+          <small>EMAIL</small>
+          <a href="mailto:alyssarezada28@gmail.com">
+            alyssarezada28@gmail.com
+          </a>
+        </div>
 
-  </div>
-</section>
+        <div>
+          <small>PHONE</small>
+          <a href="tel:+639852867457">
+            +63 985 286 7457
+          </a>
+        </div>
 
+        <div>
+          <small>LINKEDIN</small>
+          <a href="https://www.linkedin.com/in/alyssajane-rezada/"
+             target="_blank" rel="noopener">
+            linkedin.com/in/alyssajane-rezada ↗
+          </a>
+        </div>
 
-  <footer><a class="brand" href="#home">AJR<span>.</span></a><p>© <span id="year"></span> Alyssa Jane Rezada. All rights reserved.</p><a href="#home">Back to top ↑</a></footer>
+        <div>
+          <small>LOCATION</small>
+          <span>Philippines</span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <a class="brand" href="#home">AJR<span>.</span></a>
+    <p>© <span id="year"></span> Alyssa Jane Rezada. All rights reserved.</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
   <script src="script.js"></script>
+
 </body>
 </html>
